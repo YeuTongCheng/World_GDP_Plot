@@ -37,11 +37,6 @@ def reconcile_countries_by_code(codeinfo, plot_countries, gdp_countries):
       gdp_countries.  The set contains the country codes from
       plot_countries that did not have a country with a corresponding
       code in gdp_countries.
-
-      Note that all codes should be compared in a case-insensitive
-      way.  However, the returned dictionary and set should include
-      the codes with the exact same case as they have in
-      plot_countries and gdp_countries.
     """
     recon_tup=tuple()
     recon_dict=dict()
