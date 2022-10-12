@@ -137,8 +137,8 @@ def render_world_map(gdpinfo, codeinfo, plot_countries, year, map_file):
       it to a file named by svg_filename.
     """
     worldmap_chart = pygal.maps.world.World()
-    worldmap_chart.title = 'GDP by country 1960'
-    worldmap_chart.add('GDP for 1960',build_map_dict_by_code(gdpinfo, codeinfo, plot_countries, year)[0])
+    worldmap_chart.title = 'GDP by country'+year
+    worldmap_chart.add('GDP for'+year,build_map_dict_by_code(gdpinfo, codeinfo, plot_countries, year)[0])
     worldmap_chart.add('Missing',build_map_dict_by_code(gdpinfo, codeinfo, plot_countries, year)[1])
     worldmap_chart.add('No data',build_map_dict_by_code(gdpinfo, codeinfo, plot_countries, year)[2])
     worldmap_chart.render_to_file(map_file)
